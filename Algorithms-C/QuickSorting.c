@@ -8,7 +8,7 @@ QuickSorting Algorithm for an int type array
 */
 #include<stdio.h>
 
-void quicksort(int number[],int first,int last);
+void quickSort(int number[],int first,int last);
 
 int first = 0;//Array start at 0
 
@@ -19,7 +19,7 @@ int main(){// testing
     printf("\nNon Sorted: ");
     for(int i=0;i<last;i++) printf(" %d",number[i]);
    
-    quicksort(number,first,last);
+    quickSort(number,first,last);
 
     printf("\nSorted: ");
     for(int i=0;i<last;i++) printf(" %d",number[i]);
@@ -27,7 +27,7 @@ int main(){// testing
     return 0;
 }
 
-void quicksort(int number[],int first,int last){
+void quickSort(int number[],int first,int last){
    int i, j, pivot, temp;
    if(first<last){
         pivot=first;
@@ -46,7 +46,7 @@ void quicksort(int number[],int first,int last){
         temp=number[pivot];
         number[pivot]=number[j];
         number[j]=temp;
-      quicksort(number,first,j-1);
-      quicksort(number,j+1,last);
+      quickSort(number,first,j-1);
+      quickSort(number,j+1,last);
     }
 }
